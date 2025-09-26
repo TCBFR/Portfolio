@@ -1,0 +1,55 @@
+RewriteEngine On
+
+# Définir la base de réécriture
+RewriteBase /
+
+# Forcer HTTPS (optionnel - commentez si pas nécessaire)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Empêcher l'accès direct aux fichiers sensibles
+<Files "router.php">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<Files "*.log">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# Empêcher l'accès direct aux dossiers système
+RewriteRule ^(app|vendor|config)/ - [F,L]
+
+# Servir directement les fichiers statiques (CSS, JS, images, etc.)
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{REQUEST_URI} \.(css|js|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot|pdf)$ [NC]
+RewriteRule ^ - [L]
+
+# Rediriger les URLs contenant "index.php" vers la même URL sans "index.php"
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(.*/)?index\.php\ ? [NC]
+RewriteRule ^(.*/)?index\.php$ /$1 [R=301,L]
+
+# TOUTES les autres requêtes vont vers index.php (votre système principal)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php [L]
+
+# Configuration pour les types MIME
+AddType text/css .css
+AddType application/javascript .js
+AddType image/png .png
+AddType image/jpeg .jpg
+AddType image/jpeg .jpeg
+AddType image/gif .gif
+AddType image/svg+xml .svg
+
+# Cache pour les ressources statiques
+<FilesMatch "\.(css|js|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot)$">
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+</FilesMatch>
+
+# Sécurité supplémentaire
+Options -Indexes
+ServerSignature Off

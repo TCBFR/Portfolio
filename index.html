@@ -3,22 +3,924 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon premier site</title>
+    <title>Mon Portfolio</title>
 </head>
 <body>
-    <h1>Bienvenue sur mon site</h1>
-    <p>Ceci est mon premier paragraphe en HTML</p>
-    <a>href: "https://github.com/"> Visitez mon GitHub</a>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">T.CAVICCHINI</a>
+            
+            <ul class="nav-menu">
+                <li class="navbar-item dropdown">
+                    <button class="dropdown-btn">
+                        BTS SIO
+                        <i class="fas fa-chevron-down dropdown-arrow"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="stage.html"><i class="fas fa-briefcase"></i> Stage</a>
+                        <a href="veille.html"><i class="fas fa-search"></i> Veille</a>
+                    </div>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="projets.html" class="nav-link">
+                        <i class="fas fa-code"></i> Projets
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="#contact" class="navbar-link contact-btn">
+                        <i class="fas fa-envelope"></i> Contact
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="section fade-in">
+        <hr>
+        <h2>A propos de moi</h2>
+        <hr>
+        <div class="cards-grid">
+            <div class="card">
+                <h3><i class="fas fa-user-graduate"></i> Présentation</h3>
+                <p>J'ai débuté l'informatique dans une école privée basé sur le gaming en 2023, cela m'avait bien interessé suite a cela 
+                    j'ai commencé a programmer quelques projets puis j'ai commencé a faire un BTS SIO sur Brive la Gaillarde en 2024.
+                </p>
+                <a href="IMG/cv.png" class="cv-btn">
+                    <i class="fas fa-file-download"></i> Consultez mon CV
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parcours professionnel -->
+    <section class="section fade-in">
+        <hr>
+        <h2 id="competence">Mes parcours professionnels</h2>
+        <hr>
+        <div class="cards-grid">
+            <section class="timeline fade-in delay-3">
+                <div class="header-row">
+                    <span class="header-left">Parcours professionnel</span>
+                    <span class="header-right">Expériences professionnelles</span>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Stage de fin d'année BTS SIO</div>
+                        <div class="timeline-title">Stage en télétravail avec l'entreprise 1ère Pages 2025</div>
+                        <div class="timeline-desc">Installation de Linux, Apprentissage sur WP et installation d'un honeypot</div>
+                    </div>
+                    <div class="timeline-marker"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">1ère année de BTS SIO</div>
+                        <div class="timeline-title">Lycée BAHUET 2024 - 2025</div>
+                        <div class="timeline-desc">Apprentissage Back-end, PHP, Python et MySQL</div>
+                    </div>
+                    <div class="timeline-marker"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Apprentissage Front-end</div>
+                        <div class="timeline-title">École privée EGS 2023 - 2024</div>
+                        <div class="timeline-desc">Apprentissage du HTML CSS</div>
+                    </div>
+                    <div class="timeline-marker"></div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Compétences -->
+    <section class="section fade-in">
+        <hr>
+        <h2>Mes Compétences</h2>
     <hr>
-    <ul>
-        <li>HTML </li>
-        <li>CSS </li>
-        <li>Python </li>
-    </ul>
-    <hr>
-    <img src= "IMG/cv.png" alt="Mon cv">
-    <footer>
-        <p> © 2025 - Mon portfolio</p>
-    </footer>
+        <div class="skills-container">
+            <div class="skills-slider" id="skillsSlider">
+                <img src="IMG/css.png">
+                <img src="IMG/html.png">
+                <img src="IMG/JS.png">
+                <img src="IMG/linux.jpeg">
+                <img src="IMG/wordpress.avif">
+                <img src="IMG/php.jpeg">
+                <img src="IMG/mysql.png">
+            </div>
+        </div>
+    </section>
+    <section class="section fade-in">
+        <h2>Contact</h2>
+        <form id="contactForm" method="POST" action="">
+            <div class="form-group fade-in" style="animation-delay: 0.1s;">
+                <label for="nom">Nom <span class="required">*</span></label>
+                <input type="text" id="nom" name="nom">
+            </div>
+            
+            <div class="form-group fade-in" style="animation-delay: 0.2s;">
+                <label for="entreprise">Entreprise</label>
+                <input type="text" id="entreprise" name="entreprise">
+            </div>
+            
+            <div class="form-group fade-in" style="animation-delay: 0.3s;">
+                <label for="email">Adresse e-mail <span class="required">*</span></label>
+                <input type="email" id="email" name="email">
+            </div>
+            
+            <div class="form-group fade-in" style="animation-delay: 0.4s;">
+                <label for="telephone">Téléphone</label>
+                <input type="tel" id="telephone" name="telephone">
+            </div>
+            
+            <div class="form-group fade-in" style="animation-delay: 0.5s;">
+                <label for="objet">Objet <span class="required">*</span></label>
+                <input type="text" id="objet" name="objet">
+            </div>
+            
+           
+            <div class="fade-in" style="animation-delay: 0.8s;">
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Envoyer
+                </button>
+        </form>
+   
 </body>
 </html>
+<style>
+/* ================================
+   VARIABLES CSS ROOT
+   ================================ */
+   :root {
+    /* Couleurs principales thème clair */
+    --primary-color: #3498db;
+    --primary-green: #27ae60;
+    --secondary-color: #2980b9;
+    --accent-color: #e74c3c;
+    
+    
+    /* Animations */
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+    --glow: rgba(52, 152, 219, 0.2);
+    --border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Thème sombre */
+[data-theme="dark"] {
+    /* Couleurs principales thème sombre */
+    --primary-color: #3498db;
+    --primary-green: #27ae60;
+    --secondary-color: #2980b9;
+    --accent-color: #e74c3c;
+    
+    /* Backgrounds thème sombre */
+    --bg-primary: #1a1a2e;
+    --bg-secondary: #16213e;
+    --card-bg: rgba(22, 33, 62, 0.9);
+    
+    /* Textes thème sombre */
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.8);
+    
+    /* Navigation thème sombre */
+    --navbar-bg: rgba(26, 26, 46, 0.95);
+    --navbar-text: #ffffff;
+    --navbar-hover: #3498db;
+    --navbar-shadow: rgba(0, 0, 0, 0.3);
+    --dropdown-bg: #2c2c54;
+    --dropdown-shadow: rgba(0, 0, 0, 0.4);
+    --toggle-bg: #4a4a4a;
+    --toggle-handle: #1a1a2e;
+    --border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ================================
+   STYLES GLOBAUX
+   ================================ */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: var(--transition);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    padding-top: 80px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ================================
+   NAVBAR
+   ================================ */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--navbar-bg);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 4px 20px var(--navbar-shadow);
+    z-index: 1000;
+    padding: 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.nav-logo {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--navbar-text);
+    text-decoration: none;
+    background: black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transition: var(--transition);
+}
+
+.nav-logo:hover {
+    transform: scale(1.05);
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    color: var(--navbar-text);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-link:hover {
+    color: var(--navbar-hover);
+    background: rgba(52, 152, 219, 0.1);
+    transform: translateY(-2px);
+}
+
+.nav-link.active {
+    color: var(--navbar-hover);
+    background: rgba(52, 152, 219, 0.1);
+}
+
+.contact-btn {
+    background: lightgray;
+    color: white !important;
+    border-radius: 25px;
+    padding: 12px 20px;
+}
+
+.contact-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-green));
+}
+
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-btn {
+    background: none;
+    border: none;
+    color: var(--navbar-text);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+}
+
+.dropdown-btn:hover {
+    color: var(--navbar-hover);
+    background: rgba(52, 152, 219, 0.1);
+    transform: translateY(-2px);
+}
+
+.dropdown-arrow {
+    transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-arrow,
+.dropdown.active .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--dropdown-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px var(--dropdown-shadow);
+    border: 1px solid var(--border-color);
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1001;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown.active .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-content a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 20px;
+    color: var(--navbar-text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    border-radius: 8px;
+    margin: 5px;
+}
+
+.dropdown-content a:hover {
+    background: rgba(52, 152, 219, 0.1);
+    color: var(--navbar-hover);
+    transform: translateX(5px);
+}
+/* ================================
+   HERO SECTION SIMPLIFIÉE
+   ================================ */
+#container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-primary);
+}
+
+.central-logo {
+    text-align: center;
+    z-index: 100;
+}
+
+.logo-text {
+    font-size: 4rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, var(--primary-color), var(--primary-green), var(--secondary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+}
+
+.typing-text {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-green));
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: var(--transition);
+    box-shadow: 0 5px 20px var(--glow);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px var(--glow);
+}
+
+/* ================================
+   SECTIONS GÉNÉRIQUES
+   ================================ */
+.section {
+    padding: 5rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    color: var(--text-primary);
+    background: black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section h2:after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: lightgray;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ================================
+   CARTES / À PROPOS
+   ================================ */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.card {
+    border-radius: 15px;
+    padding: 2rem;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px var(--glow);
+}
+
+.card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: lightgray;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.card:hover:before {
+    transform: scaleX(1);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.cv-btn {
+    display: inline-block;
+    background: lightgray;
+    color: #fff;
+    padding: 12px 32px;
+    border-radius: 28px;
+    font-size: 1.1em;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    margin-top: 1rem;
+}
+
+.cv-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px var(--glow);
+}
+
+/* ================================
+   TIMELINE
+   ================================ */
+.timeline {
+    position: relative;
+    margin: 40px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-green));
+    transform: translateX(-50%);
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+    background: var(--card-bg);
+    color: var(--text-primary);
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border: 1px solid var(--border-color);
+}
+
+.header-left,
+.header-right {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.timeline-item {
+    position: relative;
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row;
+}
+
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.timeline-content {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    width: 45%;
+    position: relative;
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+}
+
+.timeline-content:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px var(--glow);
+}
+
+.timeline-marker {
+    position: absolute;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    background: var(--primary-color);
+    border: 4px solid var(--bg-primary);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+.timeline-title {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.timeline-desc {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* ================================
+   COMPÉTENCES / SKILLS
+   ================================ */
+
+
+.skill-item {
+    flex: 0 0 120px;
+    height: 120px;
+    margin: 0 20px;
+    position: relative;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.skill-logo {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    transition: var(--transition);
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.1));
+}
+
+.skill-item:hover .skill-logo {
+    transform: scale(1.05) translateY(-5px);
+    filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.2));
+}
+
+.skill-tooltip {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--card-bg);
+    color: var(--text-primary);
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+    z-index: 10;
+    border: 1px solid var(--border-color);
+}
+
+.skill-tooltip::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid var(--card-bg);
+}
+
+.skill-item:hover .skill-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+.skill-name {
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-primary);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.skill-item:hover .skill-name {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+/* ================================
+   CONTACT
+   ================================ */
+.contact-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.form-section {
+    flex: 1;
+    max-width: 700px;
+    padding: 40px;
+    border-radius: 15px;
+    background: lightgrey;
+    border: 1px solid var(--border-color);
+}
+
+.text-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 600px;
+    padding: 40px;
+    position: relative;
+}
+
+.design-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    max-width: 500px;
+    color: var(--text-primary);
+}
+
+.design-text .highlight {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    position: relative;
+}
+
+.floating-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.floating-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: var(--glow);
+    opacity: 0.3;
+}
+
+.floating-circle:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    top: 10%;
+    left: 10%;
+}
+
+.floating-circle:nth-child(2) {
+    width: 120px;
+    height: 120px;
+    top: 60%;
+    right: 10%;
+}
+
+.floating-circle:nth-child(3) {
+    width: 60px;
+    height: 60px;
+    bottom: 20%;
+    left: 20%;
+}
+
+/* Formulaire */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--text-primary);
+    font-size: 16px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px 20px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-primary);
+    transition: var(--transition);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px var(--glow);
+    border-color: var(--primary-color);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 140px;
+    font-family: 'Inter', sans-serif;
+}
+
+.required {
+    color: #ff6b6b;
+}
+
+.submit-btn {
+    background: lightgray;
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px var(--glow);
+    font-family: 'Inter', sans-serif;
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px var(--glow);
+}
+
+.success-message,
+.error-message {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: none;
+    font-weight: 500;
+}
+
+.success-message {
+    background: rgba(76, 175, 80, 0.1);
+    color: #4CAF50;
+    border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.error-message {
+    background: rgba(255, 107, 107, 0.1);
+    color: #ff6b6b;
+    border: 1px solid rgba(255, 107, 107, 0.3);
+}
+
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.contact-info svg {
+    width: 18px;
+    height: 18px;
+    margin-right: 12px;
+    fill: var(--primary-color);
+}
+img{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  border: 2px solid #fff;
+  margin-top: 150px;
+  margin-right: 30px;
+}
+</style>

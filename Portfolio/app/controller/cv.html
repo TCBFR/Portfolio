@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV CAVICCHINI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background: white;
+            font-size: 10px;
+        }
+        
+        .cv-container {
+            width: 210mm;
+            height: 297mm;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            padding: 0;
+        }
+        
+        .header {
+            border-bottom: 3px solid #2c3e50;
+            text-align: center;
+            background: white;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+            color: #2c3e50;
+            letter-spacing: 2px;
+        }
+        
+        .header .subtitle {
+            font-size: 10px;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            font-size: 10px;
+        }
+        
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 0;
+            height: calc(297mm - 80px);
+        }
+        
+        .left-column {
+            padding: 15px 15px;
+            background: #f8f9fa;
+            border-right: 1px solid #ecf0f1;
+        }
+        
+        .right-column {
+            padding: 15px 20px;
+        }
+        
+        .photo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #bdc3c7;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #7f8c8d;
+            font-size: 10px;
+            border: 3px solid #ecf0f1;
+            background-image: url("public/assets/image/photo.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .photo:empty::after {
+            content: "Photo";
+        }
+        
+        .section {
+            margin-bottom: 10px;
+        }
+        
+        .section h2 {
+            font-size: 13px;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 3px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .section h3 {
+            font-size: 11px;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        
+        .section p, .section li {
+            font-size: 10px;
+            line-height: 1.3;
+        }
+        
+        .skills-list {
+            list-style: none;
+        }
+        
+        .skills-list li {
+            background: white;
+            padding: 5px 10px;
+            margin-bottom: 4px;
+            border-left: 3px solid #3498db;
+            border-radius: 0 3px 3px 0;
+            font-size: 10px;
+        }
+        
+        .experience-item, .education-item {
+            margin-bottom: 7px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .experience-item:last-child, .education-item:last-child {
+            border-bottom: none;
+            margin-bottom: 10px;
+        }
+        
+        .job-title {
+            font-size: 11px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 2px;
+        }
+        
+        .company {
+            font-weight: 600;
+            color: #3498db;
+            margin-bottom: 2px;
+            font-size: 10px;
+        }
+        
+        .date {
+            color: #7f8c8d;
+            font-style: italic;
+            margin-bottom: 5px;
+            font-size: 9px;
+        }
+        
+        .description {
+            color: #555;
+            line-height: 1.3;
+        }
+        
+        .description p {
+            margin-bottom: 2px;
+            font-size: 9px;
+        }
+        
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .cv-container {
+                box-shadow: none;
+                width: 210mm;
+                height: 297mm;
+                margin: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .cv-container {
+                width: 100%;
+                height: auto;
+                min-height: 100vh;
+            }
+            .main-content {
+                grid-template-columns: 1fr;
+                height: auto;
+            }
+            .left-column {
+                border-right: none;
+                border-bottom: 1px solid #ecf0f1;
+            }
+            .contact-info {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <header class="header">
+            <h1>Théo CAVICCHINI</h1>
+            <div class="subtitle">Stage en développement</div>
+            <div class="contact-info">
+                <span>📧 theo.cv03@gmail.com</span>
+                <span>📱 +33 6 64 82 92 69</span>
+                <span>📅 07/08/2001</span>
+                <span>📍 Bordeaux, France</span>
+            </div>
+        </header>
+       
+        <div class="main-content">
+            <div class="left-column">
+                <div class="photo-container">
+                    <div class="photo"></div>
+                </div>
+
+                <div class="section">
+                    <h2>Qualités</h2>
+                    <ul class="skills-list">
+                        <li>À l'écoute des clients</li>
+                        <li>Autonome & Responsable</li>
+                        <li>Ponctuel & Discret</li>
+                        <li>Poli</li>
+                    </ul>
+                </div>
+                
+                <div class="section">
+                    <h2>Compétences</h2>
+                    <ul class="skills-list">
+                        <li>PHP</li>
+                        <li>MySQL</li>
+                        <li>WordPress</li>
+                        <li>Python</li>
+                        <li>CSS</li>
+                    </ul>
+                </div>
+                
+                <div class="section">
+                    <h2>Langues</h2>
+                    <div>
+                        <p><strong>Français</strong> - Langue maternelle</p>
+                        <p><strong>Anglais</strong> - Élémentaire (A1)</p>
+                        <p><strong>Espagnol</strong> - Élémentaire (A1)</p>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2>Centres d'Intérêt</h2>
+                    <div>
+                        <p>Judo - Codage</p>
+                        <p>Musique - Lecture</p>
+                        <p>Création - Jeux vidéos</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-column">  
+                <div class="section">
+                    <h2>Expériences Professionnelles</h2>
+
+                    <div class="experience-item">
+                        <div class="job-title">Stage</div>
+                        <div class="company">1ères Pages</div>
+                        <div class="date">Juin 2025</div>
+                        <div class="description">
+                            <p>• Réalisation de projet WordPress.</p>
+                            <p>• Installation Linux MINT.</p>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="job-title">Drive</div>
+                        <div class="company">CARREFOUR</div>
+                        <div class="date">Septembre 2023</div>
+                        <div class="description">
+                            <p>• Remplissage des colis.</p>
+                            <p>• Vérification des produits dans le colis.</p>
+                            <p>• Rangement des colis.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="job-title">Mise en rayon</div>
+                        <div class="company">CARREFOUR</div>
+                        <div class="date">Novembre 2022 - Décembre 2022</div>
+                        <div class="description">
+                            <p>• Rangement des rayons.</p>
+                            <p>• Contrôle des produits rangés.</p>
+                            <p>• Utilisation du transpalette.</p>
+                            <p>• Réalisation du facing.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="job-title">Valet de chambre</div>
+                        <div class="company">Hôtel Renaissance & Moxy</div>
+                        <div class="date">Juillet 2021 - Août 2021</div>
+                        <div class="description">
+                            <p>• Utilisation de produits ménager.</p>
+                            <p>• Nettoyage des chambres & de l'hôtel.</p>
+                            <p>• Suivi et responsable de la propreté des pièces.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="job-title">Bénévolat</div>
+                        <div class="company">Mairie de TALENCE</div>
+                        <div class="date">Juin 2021</div>
+                        <div class="description">
+                            <p>• Dépouillement des bulletins de votes régionales.</p>
+                            <p>• Très convivial</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2>Formation</h2>
+                    
+                    <div class="education-item">
+                        <div class="job-title">1ère année de BTS SIO option SLAM</div>
+                        <div class="company">Lycée BAHUET</div>
+                        <div class="date">2024 - 2027</div>
+                        <div class="description">
+                            <p>Stage de fin d'études en télétravail avec l'entreprise 1ère Pages</p>
+                        </div>
+                    </div>
+                    <div class="education-item">
+                        <div class="job-title">1ère année en DROIT</div>
+                        <div class="company">Université de Pessac</div>
+                        <div class="date">2021 - 2022</div>
+                        <div class="description"> 
+                        </div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="job-title">Obtention du baccalauréat STMG</div>
+                        <div class="company">Lycée Gustave EIFFEL</div>
+                        <div class="date">2020 - 2021</div>
+                        <div class="description">
+                            <p>Sciences et Technologies du Management et de la Gestion</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

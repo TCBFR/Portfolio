@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "Pokemon Hollow";
+  src: url('../font/PokemonHollow.ttf');
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Pokemon Hollow", sans-serif;
+  background-color: yellow;
+  color: blue;
+  padding-bottom: 5vh;
+  height: 25vh;
+  font-size: 7vh;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+section {
+  background-image: url('../img/wave.jpg');
+  background-size: cover;
+  width: 50%;
+  height: 75vh;
+  margin: auto;
+  position: relative;
+}
+.image-2, .image-3, .image-4 {
+  position: absolute;
+  z-index: 1;
+}
+.image-2 {
+  width: 10%;
+  top: 75%;
+  left: 15%;
+}
+.image-3 {
+  width: 20%;
+  top: 40%;
+  left: 40%;
+}
+.image-4 {
+  width: 50%;
+  top: -15%;
+  left: 60%;
+}

@@ -3,9 +3,587 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mon Portfolio</title>
 </head>
 <body>
-    
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">T.CAVICCHINI</a>
+            
+            <ul class="nav-menu">
+                <li class="navbar-item dropdown">
+                    <button class="dropdown-btn">
+                        BTS SIO
+                        <i class="fas fa-chevron-down dropdown-arrow"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="stage.html"><i class="fas fa-briefcase"></i> Stage</a>
+                        <a href="veille.html"><i class="fas fa-search"></i> Veille</a>
+                    </div>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="projets.html" class="nav-link">
+                        <i class="fas fa-code"></i> Projets
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="#contact" class="navbar-link contact-btn">
+                        <i class="fas fa-envelope"></i> Contact
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <header class="header">
+            <h1>Suivi de Stage</h1>
+            <p>Développement Web & Applications</p>
+        </header>
+
+        <main class="main-content">
+            <section class="stage-info fade-in">
+                <div class="info-card delay-1">
+                    <h3>📋 Informations Générales</h3>
+                    <p><strong>Entreprise :</strong> 1ère Pages</p>
+                    <p><strong>Période :</strong> 26 Mai - 28 Juin 2025</p>
+                    <p><strong>Durée :</strong> 5 semaines</p>
+                    <p><strong>Tuteur :</strong> Monsieur MARQUET</p>
+                </div>
+
+                <div class="info-card delay-2">
+                    <h3>🎯 Mission Principale</h3>
+                    <p>Développement d'un thème enfant sur WordPress avec focus sur l'optimisation et la sécurisation des sauvegardes. Création d'une architecture modulaire et réutilisable pour les futurs projets de l'entreprise.</p>
+                </div>
+
+                <div class="info-card delay-3">
+                    <h3>💻 Technologies Utilisées</h3>
+                    <p>WordPress, PHP 8.0, Git, Linux Ubuntu, MySQL, HTML5/CSS3, JavaScript ES6, Docker, Composer, WP-CLI</p>
+                </div>
+            </section>
+
+            <section class="stats-grid fade-in delay-1">
+                <div class="stat-card">
+                    <div class="stat-number">30</div>
+                    <div class="stat-label">Jours de stage</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Projets réalisés</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">127</div>
+                    <div class="stat-label">Commits Git</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Objectifs atteints</div>
+                </div>
+            </section>
+
+            <section class="progress-section fade-in delay-2">
+                <h2>Progression des Compétences</h2>
+                <div class="progress-grid">
+                    <div class="progress-item">
+                        <h4>Développement Frontend</h4>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 90%;"></div>
+                        </div>
+                        <div class="progress-text">90%</div>
+                    </div>
+                    <div class="progress-item">
+                        <h4>Développement Backend</h4>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%;"></div>
+                        </div>
+                        <div class="progress-text">75%</div>
+                    </div>
+                    <div class="progress-item">
+                        <h4>Gestion de Base de Données</h4>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%;"></div>
+                        </div>
+                        <div class="progress-text">65%</div>
+                    </div>
+                    <div class="progress-item">
+                        <h4>DevOps & CI/CD</h4>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 70%;"></div>
+                        </div>
+                        <div class="progress-text">70%</div>
+                    </div>
+                    <div class="progress-item">
+                        <h4>Gestion de Projet</h4>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 80%;"></div>
+                        </div>
+                        <div class="progress-text">80%</div>
+                    </div>
+                    <div class="progress-item">
+                        <h4>Tests & Debugging</h4>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%;"></div>
+                        </div>
+                        <div class="progress-text">85%</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="timeline fade-in delay-3">
+                <h2 style="text-align: center; margin-bottom: 60px; font-size: 2.2rem; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Timeline du Stage</h2>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Semaine 1</div>
+                        <div class="timeline-title">Intégration & Analyse</div>
+                        <div class="timeline-desc">Découverte de l'environnement de travail, analyse des besoins et définition des objectifs du projet. Mise en place de l'environnement de développement.</div>
+                    </div>
+                    <div class="timeline-marker"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Semaine 2</div>
+                        <div class="timeline-title">Développement Initial</div>
+                        <div class="timeline-desc">Création du thème enfant WordPress, personnalisation du header et modification des fonctions principales. Implémentation des premières fonctionnalités.</div>
+                    </div>
+                    <div class="timeline-marker"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Semaine 3</div>
+                        <div class="timeline-title">Tests & Optimisation</div>
+                        <div class="timeline-desc">Phase intensive de tests et debugging. Résolution des problèmes de compatibilité cross-thèmes. Optimisation des performances.</div>
+                    </div>
+                    <div class="timeline-marker"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Semaine 4</div>
+                        <div class="timeline-title">Formation Linux</div>
+                        <div class="timeline-desc">Installation et configuration de Linux en dual boot. Atelier de formation sur l'administration système organisé par le maître de stage.</div>
+                    </div>
+                    <div class="timeline-marker"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Semaine 5</div>
+                        <div class="timeline-title">Sécurisation & Finalisation</div>
+                        <div class="timeline-desc">Implémentation d'un système de sauvegarde sécurisé avec modification du dossier par défaut. Documentation complète et transfert de compétences.</div>
+                    </div>
+                    <div class="timeline-marker"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+   
 </body>
 </html>
+<style>
+    .demo-1 {
+            background: linear-gradient(135deg, #0a0a0a, #1a1a2e);
+        }
+
+        .matrix-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .matrix-column {
+            position: absolute;
+            color: #00ff88;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            animation: matrix-rain linear infinite;
+            opacity: 0.7;
+        }
+
+        .demo-1 .hero-title {
+            background: linear-gradient(45deg, #00ff88, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: slideInFromLeft 1.5s ease-out 0.5s forwards;
+        }
+
+        .demo-1 .hero-subtitle {
+            color: rgba(255, 255, 255, 0.8);
+            animation: fadeInUp 1s ease-out 1s forwards;
+        }
+
+        @keyframes matrix-rain {
+            0% { transform: translateY(-100vh); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(100vh); opacity: 0; }
+        }
+        .timeline {
+    position: relative;
+    margin: 40px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-green));
+    transform: translateX(-50%);
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+    background: var(--card-bg);
+    color: var(--text-primary);
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border: 1px solid var(--border-color);
+}
+
+.header-left,
+.header-right {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.timeline-item {
+    position: relative;
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row;
+}
+
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.timeline-content {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    width: 45%;
+    position: relative;
+    transition: transform 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.timeline-content:hover {
+    transform: scale(1.05);
+}
+
+.timeline-marker {
+    position: absolute;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    background: var(--primary-color);
+    border: 4px solid var(--bg-primary);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+.timeline-title {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.timeline-desc {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Cinematic Background */
+.cinematic-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+    background: var(--bg-primary);
+}
+
+.matrix-rain {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.matrix-column {
+    position: absolute;
+    top: -100vh;
+    font-family: 'Courier New', monospace;
+    font-size: 30px;
+    color: var(--accent-color);
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    animation: matrixFall linear infinite;
+    opacity: 0.1;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: float 20s infinite ease-in-out;
+}
+
+/* Main Content */
+.main-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Stage Info Section */
+.stage-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.info-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 35px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.info-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover::before {
+    transform: scaleX(1);
+}
+
+.info-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 30px 70px var(--glow);
+    border-color: var(--primary-color);
+}
+
+.info-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-card p {
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+.info-card strong {
+    color: var(--text-primary);
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 60px;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, var(--card-bg), var(--bg-secondary));
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, var(--primary-color), transparent);
+    opacity: 0.3;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s ease;
+}
+
+.stat-card:hover::after {
+    width: 200%;
+    height: 200%;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 50px var(--glow);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* Progress Section */
+.progress-section {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 50px;
+    margin-bottom: 60px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+}
+
+.progress-section h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 50px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.progress-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
+}
+
+.progress-item {
+    position: relative;
+}
+
+.progress-item h4 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.progress-bar {
+    height: 12px;
+    background: var(--bg-secondary);
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+    border-radius: 50px;
+    position: relative;
+    animation: progressAnimation 2s ease-out;
+    box-shadow: 0 2px 10px var(--glow);
+}
+
+.progress-text {
+    position: absolute;
+    right: 0;
+    top: -30px;
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+/* Classes d'animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+
+.footer-section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.footer-section:nth-child(1) { animation-delay: 0.1s; }
+.footer-section:nth-child(2) { animation-delay: 0.2s; }
+.footer-section:nth-child(3) { animation-delay: 0.3s; }
+.footer-section:nth-child(4) { animation-delay: 0.4s; }
+
+/* Animation des cartes au scroll */
+.project-card {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: none;
+}
+
+.project-card.animate-in {
+    animation: slideInUp 0.6s ease-out forwards;
+}
+
+
+</style>
